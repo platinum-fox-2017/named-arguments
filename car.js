@@ -1,15 +1,18 @@
 'use strict'
 
 class Car {
+  constructor(){
+
+  }
 
   start_car(options) {
-    if (options && options['headlights']) {
+    if (options && options.hasOwnProperty(['headlights'])) {
       this.headlights = options['headlights']
     } else {
       this.headlights = true
     }
 
-    if (options && options['gear']) {
+    if (options && options.hasOwnProperty(['gear'])) {
       this.gear = options['gear']
     } else {
       this.gear = 1
@@ -18,7 +21,7 @@ class Car {
 }
 
 const herbie = new Car()
-
+// console.log(herbie)
 // When we start the car, the headlights should be on by default
 herbie.start_car()
 
@@ -30,3 +33,8 @@ herbie.start_car({
 })
 
 console.log(herbie.headlights) // true ...KOK BISA?!
+console.log(herbie.gear,"before")
+herbie.start_car({
+  gear : null
+})
+console.log(herbie.gear,"after")

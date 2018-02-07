@@ -2,7 +2,7 @@
 
 class House {
 
-  constructor(address, square_feet, num_bedrooms, num_baths, cost, down_payment, sold, short_sale, has_tenants) {
+  constructor(objek) {
     this.address = objek.address
     this.square_feet = objek.square_feet
     this.num_bedrooms = objek.num_bedrooms || 3

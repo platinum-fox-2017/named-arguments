@@ -33,6 +33,16 @@ class House {
   }
 }
 
-const cool = new House('address', 100, 2, 2, 12345, 12345, true, true)
-
-console.log(cool.to_s())
+//const cool = new House('address', 100, 2, 2, 12345, 12345, true, true)
+var obj={
+  address : 'address',
+  square_feet : 100,
+  num_bedrooms : 2,
+  num_baths : 2,
+  cost : 12345,
+  down_payment : 12345,
+  sold : true,
+  short_sale : true,
+  has_tenants : true,
+}
+console.log(obj);

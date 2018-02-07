@@ -40,10 +40,10 @@ let newObj = {
   cost:12345,
   down_payment:12345,
   sold: true,
-  short_sale: true,
-  has_tenants: true
+  short_sale: true
 }
 
 const cool = new House(newObj);
 
 console.log(cool.to_s())
+console.log(cool);
